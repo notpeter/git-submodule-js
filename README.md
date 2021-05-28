@@ -5,7 +5,7 @@ This modules is git submodule file (.gitmodules) de/serializer in javascript.
 ## Install
 
 ```sh
-$ npm install git-submodule
+$ npm install git-submodule-js
 ```
 
 ## Usage
