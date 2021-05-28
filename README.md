@@ -25,6 +25,7 @@ $ npm install git-submodule-js
 
 ```typescript
 import fs from 'fs';
+import { deserialize, serialize } from 'git-submodule-js';
 const content = fs.readFileSync('.gitmodules', 'utf8');
 const result = deserialize(content);
 
