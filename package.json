@@ -1,6 +1,6 @@
 {
 	"name": "git-submodule-js",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"author": "raravel",
 	"license": "MIT",
 	"main": "dist/index.js",
