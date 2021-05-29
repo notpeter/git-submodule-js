@@ -12,12 +12,19 @@ export function deserialize(str: string): Submodule {
 		const submodule = result[1];
 		const obj: Record<string, string> = {};
 		if ( submodule ) {
-			while ( ss[++idx].trim() ) {
-				const subline = ss[idx].trim();
+			let subline = ss[++idx];
+			while ( subline && subline.trim() ) {
+				subline = ss[idx];
+				if ( !subline || subline.match(/\[submodule\s+\"(.*?)\"\]/) ) {
+					idx--;
+					break;
+				}
+				subline = subline.trim();
 				const [ subginal, key, value ] = subline.match(/(.*?)\s*=\s*(.*)/) as any;
 				if ( key && value ) {
 					obj[key] = value;
 				}
+				idx++;
 			}
 			ret[submodule] = obj;
 		}
