@@ -15,7 +15,7 @@ export function deserialize(str: string): Submodule {
 			let subline = ss[++idx];
 			while ( subline && subline.trim() ) {
 				subline = ss[idx];
-				if ( !subline || subline.match(/\[submodule\s+\"(.*?)\"\]/) ) {
+				if ( !subline.trim() || subline.match(/\[submodule\s+\"(.*?)\"\]/) ) {
 					idx--;
 					break;
 				}

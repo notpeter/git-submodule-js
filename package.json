@@ -3,6 +3,11 @@
 	"version": "1.0.4",
 	"author": "raravel",
 	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/raravel/git-submodule-js.git"
+	},
+	"homepage": "https://github.com/raravel/git-submodule-js",
 	"main": "dist/index.js",
 	"typings": "dist/index.d.ts",
 	"scripts": {
